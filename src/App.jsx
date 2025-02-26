@@ -78,7 +78,7 @@ function App() {
               </header>
 
               <div>
-                <img className="opacity-30" src="../public/weather-icons/fondo.png" alt="background" />
+                <img className="opacity-30" src="./public/weather-icons/fondo.png" alt="background" />
               </div>
 
               <div className="text-center">
