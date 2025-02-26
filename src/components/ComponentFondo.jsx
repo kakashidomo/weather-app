@@ -1,5 +1,5 @@
 import React from 'react'
-import {fondo} from '../assets/fondo'
+import fondo from '../assets/fondo.png'
 
 export function ComponentFondo() {
   return (
