@@ -42,9 +42,9 @@ function App() {
   }, [city]);
 
   // Ruta a las imágenes locales basadas en el código del clima
-    const getWeatherIcon = (iconCode) => {
-      return `/weather-icons/${iconCode}.png`;
-    };
+  /*  const getWeatherIcon = (iconCode) => {
+     return `/weather-icons/${iconCode}.png`;
+   }; */
 
 
   const formatDate = (date) => {
@@ -60,7 +60,7 @@ function App() {
   return (
     <>
       <div>
-        <div className="bg-gray-950 mx-auto overflow-hidden md:max-w-screen">
+        <div className="bg-gray-950 mx-auto overflow-hidden md:max-w-screen ">
           <div className="md:flex">
 
             <div className="bg-slate-800 h-auto w-full object-cover md:h-screen md:w-2/5">
@@ -77,8 +77,10 @@ function App() {
                   <img className="mt-4 mr-5 p-2" src="Icons/location.svg" alt="location" />
                 </div>
               </header>
+              {weatherData && (
+                <ComponentFondo icon={weatherData.weather[0].icon} />
+              )}
 
-              <ComponentFondo/>
 
               <div className="text-center">
                 {isLoading && <p>Cargando...</p>}

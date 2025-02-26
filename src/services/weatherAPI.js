@@ -37,7 +37,7 @@ export const fetchForecast = async (cityName) => {
         units: "metric", 
         appid: API_KEY,
       },
-    });
+    });console.log(response);
     return response.data;
   } catch (error) {
     throw new Error("No se pudo obtener el pronóstico del clima");
