@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ForecastCard = ({ day, icon, tempMax, tempMin }) => {
-  console.log(icon);
+  
   return (
     <>
       <div className='grid grid-cols-2  '>
