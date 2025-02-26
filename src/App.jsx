@@ -6,6 +6,7 @@ import ForecastCard from "./components/ForecastCard";
 import TemperatureUnitSelector from "./components/TemperatureUnitSelector";
 import WeatherHighlights from "./components/WeatherHighlights";
 import { celsiusToFahrenheit } from "./helpers/celsiusToFahrenheit";
+import { ComponentFondo } from "./components/ComponentFondo";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -41,9 +42,9 @@ function App() {
   }, [city]);
 
   // Ruta a las imágenes locales basadas en el código del clima
-  /*   const getWeatherIcon = (iconCode) => {
+    const getWeatherIcon = (iconCode) => {
       return `/weather-icons/${iconCode}.png`;
-    }; */
+    };
 
 
   const formatDate = (date) => {
@@ -77,9 +78,7 @@ function App() {
                 </div>
               </header>
 
-              <div>
-                <img className="opacity-30" src="/weather-icons/fondo.png" alt="background" />
-              </div>
+              <ComponentFondo/>
 
               <div className="text-center">
                 {isLoading && <p>Cargando...</p>}
